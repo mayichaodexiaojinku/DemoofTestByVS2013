@@ -1,0 +1,10 @@
+﻿生成启动时间为 2018/4/22 18:19:22。
+     1>项目“c:\Users\82312\documents\visual studio 2013\Projects\调用堆栈\调用堆栈\调用堆栈.vcxproj”在节点 2 上(Build 个目标)。
+     1>Link:
+         E:\vs\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"c:\users\82312\documents\visual studio 2013\Projects\调用堆栈\Debug\调用堆栈.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"c:\users\82312\documents\visual studio 2013\Projects\调用堆栈\Debug\调用堆栈.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"c:\users\82312\documents\visual studio 2013\Projects\调用堆栈\Debug\调用堆栈.lib" /MACHINE:X86 Debug\test.obj
+         调用堆栈.vcxproj -> c:\users\82312\documents\visual studio 2013\Projects\调用堆栈\Debug\调用堆栈.exe
+     1>已完成生成项目“c:\Users\82312\documents\visual studio 2013\Projects\调用堆栈\调用堆栈\调用堆栈.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.84

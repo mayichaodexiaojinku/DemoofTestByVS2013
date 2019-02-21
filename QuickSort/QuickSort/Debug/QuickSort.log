@@ -1,0 +1,16 @@
+﻿生成启动时间为 2019/2/20 20:48:28。
+     1>项目“C:\Users\82312\Documents\Visual Studio 2013\Projects\QuickSort\QuickSort\QuickSort.vcxproj”在节点 2 上(Rebuild 个目标)。
+     1>ClCompile:
+         E:\vs\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt quicksort.c
+         quicksort.c
+     1>c:\users\82312\documents\visual studio 2013\projects\quicksort\quicksort\quicksort.c(13): warning C4013: “partion2”未定义；假设外部返回 int
+     1>c:\users\82312\documents\visual studio 2013\projects\quicksort\quicksort\quicksort.c(59): warning C4047: “函数”:“int *”与“int (*)[10]”的间接级别不同
+     1>c:\users\82312\documents\visual studio 2013\projects\quicksort\quicksort\quicksort.c(59): warning C4024: “Quicksort”: 形参和实参 1 的类型不同
+       Link:
+         E:\vs\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\82312\Documents\Visual Studio 2013\Projects\QuickSort\Debug\QuickSort.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\82312\Documents\Visual Studio 2013\Projects\QuickSort\Debug\QuickSort.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\82312\Documents\Visual Studio 2013\Projects\QuickSort\Debug\QuickSort.lib" /MACHINE:X86 Debug\quicksort.obj
+         QuickSort.vcxproj -> C:\Users\82312\Documents\Visual Studio 2013\Projects\QuickSort\Debug\QuickSort.exe
+     1>已完成生成项目“C:\Users\82312\Documents\Visual Studio 2013\Projects\QuickSort\QuickSort\QuickSort.vcxproj”(Rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.54
