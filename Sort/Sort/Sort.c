@@ -46,8 +46,7 @@ void ShellSort(int* arr, int size)
 			}
 			arr[end + pos] = key;
 		}
-		pos--
-			;
+		pos--;
 	}
 }
 void BubbleSort(int* arr, int size)

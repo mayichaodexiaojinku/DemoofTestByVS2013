@@ -238,7 +238,7 @@ int	IsNextPass(Maze * m, Position cur,Position next)
 {
 		if (next.x > 0 && next.x <= ROW - 1 && next.y>0 && next.y <= COL - 1)
 		{
-			if (1 == m->tmp[next.x][next.y] || m->tmp[next.x][next.y]>m->tmp[cur.x][cur.y])
+			if (1 == m->tmp[next.x][next.y] || m->tmp[next.x][next.y] > m->tmp[cur.x][cur.y])
 			{
 				return 1;
 			}

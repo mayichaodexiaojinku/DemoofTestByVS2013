@@ -67,7 +67,6 @@
 //  cout << s << endl;
 //  cout << "[demo] Cut With HMM" << endl;
 //  jieba.Cut(GBKToUTF8(s), words, true);
-//  //cout << limonp::Join(words.begin(), words.end(), "/") << endl;
 //  for (const auto& e : words)
 //  {
 //	  cout << UTF8ToGBK(e) << "/";
@@ -80,7 +79,7 @@
 //	  cout << UTF8ToGBK(e) << "/";
 //  }
 //  cout << endl;
-  //cout << limonp::Join(words.begin(), words.end(), "/") << endl;
+ //cout << limonp::Join(words.begin(), words.end(), "/") << endl;
 
  // s = "我来到北京清华大学";
  // cout << s << endl;

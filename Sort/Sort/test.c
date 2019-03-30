@@ -10,8 +10,8 @@ int main()
     //	SelectSort(&arr, sz);
 	//HeapSort(&arr, sz);
 	//QuickSortNor(&arr, sz);
-	//MergeSort(&arr, sz);
-	QuickSort(&arr, 0, 10);
+	MergeSort(&arr, sz);
+	//QuickSort(&arr, 0, 10);
  	PrintSort(&arr, sz);
 	return 0;
 }

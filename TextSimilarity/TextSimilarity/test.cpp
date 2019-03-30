@@ -121,3 +121,4 @@ int main(int argc,char* argv[])
 	ts.textsimilarityofmain(argv[2], argv[3]);
 	return 0;
 }
+
