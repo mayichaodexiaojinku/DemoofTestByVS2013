@@ -151,7 +151,6 @@ int main()
 	int a = b++,c++;
 	cout << a << endl;
 	return 0;
-*/
 #include<iostream>
 #include<string>
 #include<vector>
@@ -177,3 +176,267 @@ int main()
 	}
 	return 0;
 }
+void exam(char a[])
+{
+	printf("%d",sizeof(a));
+	return;
+}
+int main()
+{
+	char a[] = "dsadasdasd";
+	exam(a);
+	return 0;
+}
+#include<iostream>
+#include<vector>
+using namespace std;
+int N, M;
+vector<vector<int>> maze;
+vector<vector<int>> path_temp;
+vector<vector<int>> path_best;
+void MazeTrack(int i, int j)
+{
+	maze[i][j] = 1;
+	path_temp.push_back({ i, j });
+	if (i == N - 1 && j == M - 1)
+	if (path_best.empty() || path_temp.size() < path_best.size())
+		path_best = path_temp;
+	if (i - 1 > 0 && maze[i - 1][j] == 0)
+		MazeTrack(i - 1, j);
+	if (i + 1 < N && maze[i + 1][j] == 0)
+		MazeTrack(i + 1, j);
+	if (j - 1 > 0 && maze[i][j - 1] == 0)
+		MazeTrack(i, j - 1);
+	if (j + 1 < M && maze[i][j + 1] == 0)
+		MazeTrack(i, j + 1);
+	maze[i][j] = 0;
+	path_temp.pop_back();
+}
+int main()
+{
+	while (cin >> N >> M){
+		maze = vector<vector<int>>(N, vector<int>(M, 0));
+		path_temp.clear();
+		path_best.clear();
+		for (auto &i : maze)
+		for (auto&j : i)
+			cin >> j;
+		MazeTrack(0, 0);
+		for (auto i : path_best)
+			cout << '(' << i[0] << ',' << i[1] << ')' << endl;
+	}
+	return 0;
+}
+#include<vector>
+void oddInOddEvenInEven(vector<int>& arr, int len) 
+{
+	int odd = 0;
+	int even = 1;
+	while (odd < len && even <len){
+		if (arr[odd] % 2 == 0){
+			odd += 2;
+		}
+		if (arr[even] % 2 == 1){
+			even += 2;
+		}
+		if (odd < len && even < len){
+			if (arr[odd] % 2 == 1 && arr[even] % 2 == 0){
+				int temp = arr[odd];
+				arr[odd] = arr[even];
+				arr[even] = temp;
+			}
+		}
+	}
+}
+int main()
+{
+	vector<int> v;
+	for (int i = 1; i < 10; i++)
+		v.push_back(i);
+	oddInOddEvenInEven(v, 9);
+	for (int i = 0; i < 9; i++)
+		cout << v[i] << " ";
+	return 0;
+}
+bool isPalindrome(int x) {
+	if (x < 0)
+		return false;
+	string s;
+	if (s.size() == 1)
+		return true;
+	int left = 0;
+	int right = s.size() - 1;
+	while (left < right){
+		if (s[left] == s[right]){
+			left++;
+			right--;
+		}
+		else
+			return false;
+
+	}
+	return true;
+}
+int main()
+{
+	//cout << isPalindrome(1234321) << endl;
+	cout << 'A'+'5' << endl;
+	return 0;
+}
+#include<iostream>
+#include<vector>
+#include<math.h>
+using namespace std;
+bool Isprime(int n)
+{
+	for (int i = 2; i < n; i++){
+		if (n%i == 0)
+			return false;
+	}
+	return true;
+}
+int main()
+{
+	int a;
+	while (cin >> a){
+		int b = a;
+		vector<int> v;
+		cout << a << " = ";
+		if (Isprime(a)){
+			cout << 1 << " * " << a << endl;
+		}
+		else{
+			for (int i = 2; i <= a / 2; i++){
+				if (Isprime(i) && (a%i == 0)){
+					while (Isprime(i) && (b%i == 0)){
+						v.push_back(i);
+						b = b / i;
+					}
+				}
+			}
+			for (int i = 0; i < v.size() - 1; i++)
+				cout << v[i] << " * ";
+			cout << v[v.size() - 1] << endl;
+		}
+	}
+	return 0;
+}
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+int main()
+{
+	string s;
+	getline(cin, s);
+	int k;
+	cin >> k;
+	string s1;
+	for (int i = 1; i < s.size(); i = i + 2){
+		s1 += s[i];
+	}
+	for (int i = 0; i < s1.size()-k; i = i + k){
+		reverse(s1.begin() + i, s1.begin() + i + k);
+	}
+	return 0;
+}
+#include<iostream>
+#include<string>
+#include<vector>
+using namespace std;
+int main()
+{
+	int n;
+	while (cin >> n){
+		cin.get();
+		vector<string> v(n);
+		for (int i = 0; i < n; i++)
+			getline(cin,v[i]);
+		for (int i = 0; i < n; i++){
+			if ((v[i].find(' ') == string::npos) && (v[i].find(',') == string::npos)){
+				if (i == n)
+					cout << v[i] << endl;
+				else
+					cout << v[i] << ',';
+			}
+			else{
+				if (i == n)
+					cout <<'"' << v[i] << '"' << endl;
+				else
+					cout << '"' << v[i] << '"' << ',';
+			}
+		}
+	}
+	return 0;
+}
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+	string s1, s2;
+	while (1){
+		getline(cin, s1);
+		while (s1.size() != 0){
+			getline(cin, s2);
+			for (int i = 0; i <s1.size(); i++){
+				int j;
+				for (j = 0; j < s2.size(); j++){
+					if (s1[i] == '"')
+						i++;
+					if (s1[i] != s2[j])
+						break;
+					else
+						i++;
+				}
+				if (j == s2.size())
+					cout << "Improtant!" << endl;
+			}
+			cout << "Ignore" << endl;
+		}
+	}
+	return 0;
+}
+#include<iostream>
+using namespace std;
+int main()
+{
+	int n;
+	while (cin >> n){
+		float res = 0;
+		res = (1.00 / n) * 100;
+		printf("%.2f", res);
+		cout << '%' << endl;
+	}
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
