@@ -410,6 +410,24 @@ int main()
 	}
 }
 */
+#include<vector>
+int findMaxGap(vector<int> A, int n) {
+	int res = 0;
+	for (int i = 0; i <= n - 2; i++){
+		auto maxleft = max(A.begin(), A.begin()+i);
+		auto maxright = max((A.begin()+i+1), A.end());
+		int num = abs(*maxleft - *maxright);
+		if (num > res)
+			res = num;
+	}
+	return res;
+}
+int main()
+{
+	vector<int> v = {28,75,38,44,66,1};
+	cout << findMaxGap(v, 6) << endl;
+	return 0;
+}
 
 
 
